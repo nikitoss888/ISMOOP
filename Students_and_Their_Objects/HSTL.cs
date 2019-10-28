@@ -336,7 +336,7 @@ namespace Students_and_Their_Objects
     StartMonth != 6 || StartMonth != 9 || StartMonth != 11)) ||
     (StartDay > 28 && StartMonth == 2 && StartYear % 4 != 0) ||
     (StartDay > 29 && StartMonth == 2 && (StartYear % 4 == 0 && StartYear % 100 != 0 || StartYear % 400 == 0))
-    && BirthMonth < 1 || BirthMonth > 12 && BirthYear < 1930 || BirthYear > DateTime.Now.Year - 12)
+    && StartMonth < 1 || StartMonth > 12 && StartYear < 1930 || BirthYear > DateTime.Now.Year - 12)
             {
                 do
                 {
@@ -349,7 +349,7 @@ namespace Students_and_Their_Objects
                 StartMonth != 6 || StartMonth != 9 || StartMonth != 11)) ||
                 (StartDay > 28 && StartMonth == 2 && StartYear % 4 != 0) ||
                 (StartDay > 29 && StartMonth == 2 && (StartYear % 4 == 0 && StartYear % 100 != 0 || StartYear % 400 == 0))
-                && BirthMonth < 1 || BirthMonth > 12 && BirthYear < 1930 || BirthYear > DateTime.Now.Year - 12);
+                && StartMonth < 1 || StartMonth > 12 && StartYear < 1930 || BirthYear > DateTime.Now.Year - 12);
             }
             Write("Новый размер ежемесячного взноса: "); Fee = int.Parse(ReadLine());
         }
